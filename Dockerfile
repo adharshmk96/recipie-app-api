@@ -1,5 +1,5 @@
 FROM python:3.8-alpine
-MAINTAINER Adharsh M
+MAINTAINER AdharsH
 
 ENV PYTHONUNBUFFERED 1
 
