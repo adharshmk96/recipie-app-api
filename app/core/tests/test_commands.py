@@ -1,6 +1,5 @@
-from unittest.mock import patch
 # Simulate DB being available and not available from test
-
+from unittest.mock import patch
 from django.core.management import call_command
 from django.db.utils import OperationalError
 # To Simulate the unavailablity of DB
@@ -19,7 +18,7 @@ class CommandTests(TestCase):
             # Name of Management command we give
             self.assertEqual(gi.call_count, 1)
 
-    # Same as the above
+    # To remove the delay from time sleep while testing
     @patch('time.sleep', return_value=True)
     def test_wait_for_db(self, ts):
         # Test Waiting for DB
